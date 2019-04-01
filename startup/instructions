@@ -1,0 +1,7 @@
+put rc.local into /etc/rc.local
+will automatically start the mavproxy 
+
+module load droneapi.module.api
+api start /home/odroid/LM/payload/scripts/payload_strategy.py
+
+

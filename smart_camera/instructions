@@ -1,0 +1,2 @@
+Move smart_camera.cnf to ~/smart_camera.cnf 
+python sc_main.py

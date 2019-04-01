@@ -17,7 +17,7 @@
 # start mavproxy as odroid
 (
 date
-su odroid -c /home/odroid/GitHub/ardupilot-balloon-finder/startup/start_mavproxy.sh 
+su odroid -c /home/odroid/LM/payload/startup/start_mavproxy.sh 
 ) >> /tmp/start_mavproxy.log 2>&1
 
 exit 0

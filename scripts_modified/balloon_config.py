@@ -1,24 +1,21 @@
 """
-SmartCameraConfig class : handles config for the smart_camera project
+BalloonConfig class : handles config for the balloon_finder project
 
-smart_camera.cnf file is created in the local directory
+balloon_finder.cnf file is created in the local directory
 
 other classes or files wishing to use this class should add
-    import sc_config
+    import balloon_config
 
 """
 
 from os.path import expanduser
 import ConfigParser
 
-class SmartCameraConfig(object):
+class BalloonConfig(object):
 
     def __init__(self):
         # default config file
-        self.config_file = expanduser("~/smart_camera.cnf")
-
-        # print config file location
-        print "config file: %s" % self.config_file
+        self.config_file = expanduser("~/balloon_finder.cnf")
 
         # create the global parser object
         self.parser = ConfigParser.SafeConfigParser()
@@ -49,7 +46,7 @@ class SmartCameraConfig(object):
             self.parser.add_section(section)
         return
 
-    # get_boolean - returns the boolean found in the specified section/option or the default if not found
+    # get_balloon - returns the boolean found in the specified section/option or the default if not found
     def get_boolean(self, section, option, default):
         try:
             return self.parser.getboolean(section, option) 
@@ -101,10 +98,10 @@ class SmartCameraConfig(object):
         self.parser.set(section, option, str(new_value))
         return
 
-    # main - tests SmartCameraConfig class
+    # main - tests BalloonConfig class
     def main(self):
         # print welcome message
-        print "SmartCameraConfig v1.0 test"
+        print "BalloonConfig v0.1 test"
         print "config file: %s" % self.config_file
 
         # write and read a boolean
@@ -138,8 +135,8 @@ class SmartCameraConfig(object):
 
         return
 
-# declare global config object
-config = SmartCameraConfig()
+# declare global balloon_config object
+config = BalloonConfig()
 
 # run the main routine if this is file is called from the command line
 if __name__ == "__main__":

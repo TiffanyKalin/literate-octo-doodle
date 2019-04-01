@@ -10,19 +10,20 @@ sleep 10
 date
 export HOME=/home/odroid
 PATH=$PATH:/bin:/sbin:/usr/bin:/usr/local/bin
-PATH=$PATH:$HOME/GitHub/ardupilot-balloon-finder
-PATH=$PATH:$HOME/GitHub/ardupilot-balloon-finder/scripts
-PATH=$PATH:$HOME/GitHub/ardupilot-balloon-finder/smart_camera
+PATH=$PATH:$HOME/LM/payload
+PATH=$PATH:$HOME/LM/payload/scripts
+PATH=$PATH:$HOME/LM/payload/camera
 export PATH
 echo "PATH:" $PATH
 
-PYTHONPATH=$PYTHONPATH:$HOME/GitHub/ardupilot-balloon-finder/scripts
+PYTHONPATH=$PYTHONPATH:$HOME/LM/payload/scripts
 export PYTHONPATH
 echo "PYTHONPATH:" $PYTHONPATH
 
 cd $HOME
 echo $HOME
 
+#TODO: how to call the right craft
 ls -l /dev/ttyUSB*
 ls -l /dev/serial/by-id
 ls -l /dev/video*
